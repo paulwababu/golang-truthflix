@@ -74,7 +74,7 @@ func loginPage(res http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	res.Write([]byte("Hello" + databaseUsername))
+	http.Redirect(res, req, "/clone", 301)
 
 }
 
