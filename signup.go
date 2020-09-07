@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"database/sql"
 	"net/http"
 
@@ -82,7 +83,7 @@ func homePage(res http.ResponseWriter, req *http.Request) {
 }
 
 func main() {
-	db, err = sql.Open("mysql", "paulsaul:Dellvostro443556126216621@/truthflix")
+	db, err = sql.Open("mysql", "newuser:password@/truthflix")
 	if err != nil {
 		panic(err.Error())
 	}
@@ -96,5 +97,6 @@ func main() {
 	http.HandleFunc("/signup", signupPage)
 	http.HandleFunc("/login", loginPage)
 	http.HandleFunc("/", homePage)
+	log.Println("Listening on port 8080")
 	http.ListenAndServe(":8080", nil)
 }
