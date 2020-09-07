@@ -1,8 +1,8 @@
 package main
 
 import (
-	"log"
 	"database/sql"
+	"log"
 	"net/http"
 
 	_ "github.com/go-sql-driver/mysql"
@@ -82,6 +82,14 @@ func homePage(res http.ResponseWriter, req *http.Request) {
 	http.ServeFile(res, req, "index.html")
 }
 
+func clone(res http.ResponseWriter, req *http.Request) {
+	http.ServeFile(res, req, "clone.html")
+}
+
+func catalogue(res http.ResponseWriter, req *http.Request) {
+	http.ServeFile(res, req, "catalogue.html")
+}
+
 func main() {
 	db, err = sql.Open("mysql", "newuser:password@/truthflix")
 	if err != nil {
@@ -96,6 +104,8 @@ func main() {
 
 	http.HandleFunc("/signup", signupPage)
 	http.HandleFunc("/login", loginPage)
+	http.HandleFunc("/clone", clone)
+	http.HandleFunc("/catalogue", catalogue)
 	http.HandleFunc("/", homePage)
 	log.Println("Listening on port 8080")
 	http.ListenAndServe(":8080", nil)
