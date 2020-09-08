@@ -86,9 +86,20 @@ func clone(res http.ResponseWriter, req *http.Request) {
 	http.ServeFile(res, req, "clone.html")
 }
 
-func catalogue(res http.ResponseWriter, req *http.Request) {
-	http.ServeFile(res, req, "catalogue.html")
+func tv_series(res http.ResponseWriter, req *http.Request) {
+	http.ServeFile(res, req, "tv-series.html")
 }
+
+
+func movie(res http.ResponseWriter, req *http.Request) {
+	http.ServeFile(res, req, "movies.html")
+}
+
+
+func blog(res http.ResponseWriter, req *http.Request) {
+	http.ServeFile(res, req, "blog.html")
+}
+
 
 func main() {
 	db, err = sql.Open("mysql", "newuser:password@/truthflix")
@@ -105,7 +116,9 @@ func main() {
 	http.HandleFunc("/signup", signupPage)
 	http.HandleFunc("/login", loginPage)
 	http.HandleFunc("/clone", clone)
-	http.HandleFunc("/catalogue", catalogue)
+	http.HandleFunc("/tv_series", tv_series)
+	http.HandleFunc("/movie", movie)
+	http.HandleFunc("/blog", blog)
 	http.HandleFunc("/", homePage)
 	log.Println("Listening on port 8080")
 	http.ListenAndServe(":8080", nil)
