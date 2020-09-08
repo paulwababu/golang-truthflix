@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link rel="shortcut icon" href="truth-favicon.png" type="image/x-icon">
+   <style>
+       body{margin:0;padding:0;box-sizing:border-box}.container{height:100vh;background-position:center;background-repeat:no-repeat;background-size:cover;background:url(https://showmax.akamaized.net/e/welcome_pages/img/ZA/background/background.jpg);width:100%;text-align:center}.sign-btn{position:absolute;background:#8a2be2;color:#0ff;width:80px;height:40px;font-size:15px;opacity:.9;border-radius:2px;border:0}.sign-btn{opacity:1}.sub-container{margin-top:70px}.see{font-size:80px;font-weight:700;color:#fff;font-family:Helvetica}.watch{font-size:40px;font-weight:300;color:#fff;font-family:Helvetica}.join-btn{border:0;background:#e50914;padding:20px 80px;font-size:40px;color:#fff;font-family:Helvetica;letter-spacing:2px;word-spacing:2px;opacity:.9}.join-btn1{border:0;background:#e50914;padding:20px 80px;font-size:40px;color:#fff;font-family:Helvetica;letter-spacing:2px;word-spacing:2px;opacity:.9}
+   </style>
+   <title>TruthFlix</title>
+  </head>
+  <body>
+        <div class="container">
+                <div class="header">
+ 		                      
+                </div>
+                
+                <div class="sub-container">
+                    <span class="see">Watch your movies anywhere!</span>
+                    <p class="watch">See whats next</p>
+                    <a href="/login" class="join-btn">Login</a>
+                    <br>
+                </div>
+        
+            </div>
+
+     </body>
+</html>
